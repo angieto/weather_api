@@ -1,13 +1,22 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 
-import { AppRoutingRoutingModule } from './app-routing-routing.module';
+import { CityComponent } from './city/city.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'; 
+
+// Configurate routes' rules
+const routes: Routes = [
+    // { path: '', redirectTo: '/', pathMatch: 'full' },
+    { path: '/', component: CityComponent },
+    { path: "**", redirectTo: '/home', component: PagenotfoundComponent }
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    AppRoutingRoutingModule
-  ],
-  declarations: []
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
+// make a routingComponents an array that includes all routing components
+// export to app.module.ts
+export const routingComponents = [ CityComponent, PagenotfoundComponent ]
