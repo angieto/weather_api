@@ -2,13 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CityComponent } from './city/city.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'; 
 
 // Configurate routes' rules
 const routes: Routes = [
-    // { path: '', redirectTo: '/', pathMatch: 'full' },
-    { path: '/', component: CityComponent },
-    { path: "**", redirectTo: '/home', component: PagenotfoundComponent }
+    { path: '', redirectTo: '/', pathMatch: 'full' },
+    { path: ':city', component: CityComponent },
+    { path: "**", redirectTo: '/' }
 ];
 
 @NgModule({
@@ -19,4 +18,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 // make a routingComponents an array that includes all routing components
 // export to app.module.ts
-export const routingComponents = [ CityComponent, PagenotfoundComponent ]
+export const routingComponents = [ CityComponent ]
