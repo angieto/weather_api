@@ -25,7 +25,7 @@ export class CityComponent implements OnInit {
                 console.log("Your cityData returned by obs:", this.cityData);
             });
             if (this.city === "seattle") {
-                this.img = "https://en.wikipedia.org/wiki/Seattle#/media/File:Space_Needle002.jpg";
+                this.img = "https://cdn.vox-cdn.com/thumbor/YCyWw5xOWSwwmpwX9eETXisgDiw=/0x0:5569x3713/1200x800/filters:focal(2340x1412:3230x2302)/cdn.vox-cdn.com/uploads/chorus_image/image/59409993/shutterstock_503999926.0.jpg";
             } else if (this.city === "san jose") {
                 this.img = "https://www.digitalwest.com/wp-content/uploads/2015/09/colocation_san_jose.png";
             } else if (this.city === "burbank") {

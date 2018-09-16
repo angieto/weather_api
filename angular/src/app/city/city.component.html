@@ -1,3 +1,16 @@
-<div *ngIf="cityData" class="container mx-auto text-center m-5">
+<div *ngIf="cityData" class="container m-5">
     <h2>{{ cityData.name }}</h2>
+    <hr>
+    <div class="container row">
+        <div class="container col-6">
+            <img class="figure-img img-fluid rounded" src="{{ img }}" alt="{{ cityData.name }}">
+        </div>
+        <div class="container col-5">
+            <p>Humidity: {{ cityData.main.humidity }}</p>
+            <p>Temperature (Average): {{ cityData.main.temp }}</p>
+            <p>Temperature (Low): {{ cityData.main.temp_min }}</p>
+            <p>Temperature (High): {{ cityData.main.temp_max }}</p>
+            <p>Status: {{ cityData.weather[0].description }}</p>
+        </div>
+    </div>
 </div>
